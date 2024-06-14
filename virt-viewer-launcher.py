@@ -55,7 +55,7 @@ def virt_viewer_window(label):
     signal.signal(signal.SIGCHLD, child_cleanup)
 
 
-def start_vm(button, label):
+def start_vm(label):
     if not is_running(label):
         state = subprocess.run(["virsh", "start", label])
 
